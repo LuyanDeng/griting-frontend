@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply m-0 p-0 overflow-x-hidden;
+}
+
+.main-scroller {
+  @apply w-[100vw] h-[100vh] overflow-x-hidden;
+}
+
+/* Background gradient animation */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: -200% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 20s linear infinite;
+}
+
+.animate-gradient-fast {
+  background-size: 300% 300%;
+  animation: gradientAnimation 5s linear infinite;
+}

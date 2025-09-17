@@ -1,0 +1,45 @@
+.balanceInput_wrapper {
+  @apply relative p-[16px] h-[56px] border-[1px] border-[#FFFFFF] bg-transparent rounded-[16px] transition-colors;
+}
+
+.balanceInput_wrapper_light {
+  @apply relative p-[16px] h-[56px] border-[1px] border-[#333333] bg-transparent rounded-[16px] transition-colors;
+}
+
+.balanceInput_wrapper:focus-within {
+  /* @apply border-[#FFFFFF] ring-[1px] ring-[#FFFFFF]; */
+}
+
+.balanceInput {
+  @apply w-full text-[14px] lg:text-[16px] leading-[24px] text-[#FFFFFF] overflow-ellipsis placeholder-[#979797] font-normal border-none outline-none invalid:text-[#E96170] bg-transparent;
+}
+
+.balanceInput_light {
+  @apply w-full text-[14px] lg:text-[16px] leading-[24px] text-[#000] overflow-ellipsis placeholder-[#979797] font-normal border-none outline-none invalid:text-[#E96170] bg-transparent;
+}
+
+.balanceInput_errorBorder {
+  @apply absolute -left-[1px] -top-[1px] -right-[1px] -bottom-[1px] rounded-[2px] border-[1px] border-[#E96170] ring-[1px] ring-[#E96170] opacity-0 pointer-events-none transition-opacity;
+}
+
+.balanceInput:invalid
+  ~ .balanceInput_errorBorder {
+  @apply opacity-100;
+}
+
+.input_error::placeholder {
+  @apply text-[#E96170];
+}
+
+.balanceInput:invalid {
+  @apply border-[#E96170];
+}
+
+.balanceInput:invalid
+  ~ .balanceInput_error {
+  @apply opacity-100;
+}
+
+.balanceInput:disabled {
+  @apply bg-transparent;
+}

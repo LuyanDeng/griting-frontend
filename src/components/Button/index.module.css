@@ -1,0 +1,164 @@
+/** common **/
+.fui-button {
+  @apply relative inline-flex justify-center items-center whitespace-nowrap outline-none transition-colors font-semibold cursor-pointer;
+}
+
+button.fui-button {
+  @apply min-h-[24px];
+  flex: 0
+    0
+    auto;
+}
+
+button.absolute {
+  position: absolute;
+}
+
+.fui-button--fullWidth {
+  @apply flex w-full;
+}
+
+/* icon hovering status */
+.fui-button--RArrow {
+  transition: text-indent
+    0.3s
+    ease-in-out;
+  text-indent: 9px;
+}
+
+.fui-button--RArrow:hover {
+  /* text-indent: -13.5px; */
+  text-indent: 0px;
+}
+
+.fui-button--RArrow::after {
+  display: flex;
+  justify-content: end;
+  transition: all
+    0.3s
+    ease-in-out;
+  margin-left: 9px;
+  width: 0px;
+  height: 18px;
+  font-size: 16px;
+  opacity: 0;
+}
+
+/* TODO: reusable */
+.fui-button--RArrow::after {
+  content: url(/icons/arrowR.svg);
+}
+
+.fui-button--RArrow.fui-button--linear::after {
+  content: url(/icons/arrowRB.svg);
+}
+
+.fui-button--RArrow.fui-button--linear.fui-button--text::after {
+  content: url(/icons/arrowRL.svg);
+}
+
+.fui-button--RArrow.fui-button--black.fui-button--contained::after {
+  content: url(/icons/arrowRW.svg);
+}
+
+.fui-button--RArrow:hover::after {
+  width: 18px;
+  opacity: 1;
+}
+
+/* size & shape */
+/* props: width, height, radius, font size, line height*/
+.fui-button--small {
+  @apply px-[14px] h-[32px] text-[12px] leading-[30px] rounded-[4px];
+}
+
+.fui-button--medium {
+  @apply px-[32px]  h-[56px] text-[16px] leading-[24px] rounded-[16px];
+}
+
+.fui-button--medium.fui-button--contained {
+  @apply font-bold;
+}
+
+.fui-button--medium.fui-button--outlined {
+  @apply font-medium;
+}
+
+.fui-button--large {
+  @apply px-[32px]  h-[82px] font-semibold text-[24px] leading-[31.2px] tracking-[0.03em] rounded-[16px];
+}
+/* contained button */
+.fui-button--contained {
+  @apply bg-[#0C0B20] text-[#000000];
+}
+
+.fui-button--contained:hover {
+  @apply bg-[#0C0B20] text-[#000000];
+}
+
+/* outlined button */
+
+.fui-button--outlined {
+  @apply bg-transparent border-[1px] border-solid;
+}
+
+.fui-button--outlined.fui-button--black {
+  @apply border-[rgba(31,31,31,1)] text-[rgba(31,31,31,1)];
+}
+
+.fui-button--outlined:hover {
+  @apply bg-transparent text-[rgba(31,31,31,1)];
+}
+
+.fui-button--outlined.fui-button--black:hover {
+  @apply border-[rgba(31,31,31,1)] text-[rgba(31,31,31,1)];
+}
+
+/* text button */
+.fui-button--text {
+  @apply !border-none bg-transparent text-[#111111];
+}
+
+.fui-button--text.fui-button--black:hover,
+.fui-button--text.fui-button--black:focus-visible {
+  @apply bg-[#F7F8FA] text-[rgba(31,31,31,1)];
+}
+
+.fui-button--text.fui-button--linear {
+  @apply text-transparent !bg-clip-text !border-none;
+  background: linear-gradient(
+    92.99deg,
+    #00f6d9
+      0%,
+    #80d4fd
+      49.85%,
+    #5281e0
+      100%
+  );
+}
+
+/*color*/
+.fui-button--contained.fui-button--white {
+  @apply bg-[#ffffff] text-[#000000];
+}
+
+/* .fui-button--contained.fui-button--white:hover {
+   @apply bg-[rgba(255,255,255,0.12)] text-[#ffffff];
+ } */
+
+.fui-button--contained.fui-button--black {
+  @apply bg-[#0C0B20] text-[#FFFFFF];
+}
+
+.fui-button--contained.fui-button--linear {
+  @apply text-[#08071B];
+  background: linear-gradient(
+    92.99deg,
+    #00f6d9
+      0%,
+    #80d4fd
+      49.85%,
+    #5281e0
+      100%
+  );
+}

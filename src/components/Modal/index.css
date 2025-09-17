@@ -1,0 +1,27 @@
+@keyframes fadeInBackground {
+   from {
+     background-color: rgba(0, 0, 0, 0); 
+   }
+   to {
+     background-color: rgba(0, 0, 0, 0.7); 
+   }
+ }
+ 
+ @keyframes zoomIn {
+   from {
+     transform: scale(0); 
+     opacity: 0;
+   }
+   to {
+     transform: scale(1); 
+     opacity: 1; 
+   }
+ }
+ 
+ .modal-fade-in {
+   animation: fadeInBackground 0.2s ease-out forwards;
+ }
+ 
+ .modal-zoom-in {
+   animation: zoomIn 0.2s ease-out forwards;
+ }
