@@ -1,9 +1,51 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-## Installation
-please run
+
+## Tech Stack
+- Next.js 15
+
+- React 19
+
+- Tailwind CSS
+
+- Jotai (for state management)
+
+- TypeScript
+
+
+## Setting up
+1. Install Node.js
+```bash
+brew install node
+
+```
+2. Check version:
+```bash
+node -v
+npm -v
+```
+
+3. You need Yarn to run the project:
+```bash
+npm install --global yarn
+
+```
+4. Download Repo
+5. Install Dependencies
+
 ```bash
 yarn install
 ```
+## Structure
+├── src/
+│   ├── app/             # Next.js app router
+│   ├── components/      # Shared UI components
+│   ├── modules/         # Feature modules (NavBar, Footer, etc.)
+│   ├── hooks/           # Custom React hooks
+│   ├── services/        # API calls, auth, etc.
+│   └── utils/           # Utility functions
+├── public/              # Static assets
+├── package.json
+└── README.md
 ## Getting Started
 
 First, run the development server:

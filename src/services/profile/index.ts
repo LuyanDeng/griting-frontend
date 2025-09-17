@@ -26,14 +26,20 @@ export const defaultProfile: ProfileFormData = {
 export const profileAtom = atomWithQuery<ProfileData | null>((get) => ({
    queryKey: ['profile', get(idTokenAtom)],
    queryFn: async () => {
-      const { data: idToken } = get(idTokenAtom);
-      //TODO: whether throw error or return null?
-      if (!idToken) return null
-      const res = await fetchApi<{ data: ProfileData }>({ url: `/api/profile/myprofile`, method: 'GET', idToken: idToken })
-      return res.data
+     const { data: token } = get(idTokenAtom)
+ 
+     // If no token is available, return null
+     if (!token) return null
+ 
+     const res = await fetchApi<{ data: ProfileData }>({
+       url: `/api/profile/myprofile`,
+       method: 'GET',
+       token, // now this is a string | undefined
+     })
+ 
+     return res.data
    },
-   retry: 5
-}))
-
+   retry: 5,
+ }))
 
 
