@@ -5,17 +5,9 @@ import Providers from '@/modules/Providers'
 import '@/app/globals.css'
 
 export const metadata: Metadata = {
-  title: 'HYSTA',
-  description: 'Elevate entrepreneurship & leadership for Chinese Americans',
-  robots: 'hysta, index',
-  // openGraph: {
-  //   url: 'https://hysta.vercel.app/',
-  //   type: 'website',
-  //   siteName: 'HYSTA',
-  //   description: 'Elevate entrepreneurship & leadership for Chinese Americans',
-  //   title: 'HYSTA',
-  //   images: '/imgs/og.png',
-  // },
+  title: 'GritMe',
+  description: 'AI-enhanced mentorship platform',
+ 
 }
 
 export default async function RootLayout(

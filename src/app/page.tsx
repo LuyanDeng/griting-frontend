@@ -21,9 +21,8 @@ export default Home
 const LandingMain: React.FC = () => {
   return (
     <div className="relative flex flex-col items-center w-full h-fit">
-      <div className="absolute top-[0px] left-[0px] w-full h-full bg-gradient-to-r from-[#b1b4f8] via-30% via-[#FAE6FF] vto-100% to-[#75D2FB] animate-gradient-fast z-[-1]" />
+      {/* <div className="absolute top-[0px] left-[0px] w-full h-full bg-gradient-to-r from-[#b1b4f8] via-30% via-[#FAE6FF] vto-100% to-[#75D2FB] animate-gradient-fast z-[-1]" /> */}
       <div className="relative w-full max-w-[1920px]">
-        <LandingBg />
         <div className="pt-[119px] pb-[109px] flex flex-col items-center gap-y-[56px] w-full max-w-[1920px] z-10">
           {/* <BannerWindow /> */}
           <div
