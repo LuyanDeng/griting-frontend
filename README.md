@@ -36,6 +36,7 @@ npm install --global yarn
 yarn install
 ```
 ## Structure
+```bash
 ├── src/
 │   ├── app/             # Next.js app router
 │   ├── components/      # Shared UI components
@@ -46,6 +47,7 @@ yarn install
 ├── public/              # Static assets
 ├── package.json
 └── README.md
+```
 ## Getting Started
 
 First, run the development server:
