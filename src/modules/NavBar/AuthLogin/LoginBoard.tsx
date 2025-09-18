@@ -15,7 +15,7 @@ const LoginBoardWrapper: React.FC = () => {
   }, [])
 
   return (
-    <div className='flex flex-col items-center w-full gap-y-[16px] text-[#fff]'>
+    <div className='flex flex-col items-center w-full gap-y-[16px] text-[#555555]'>
       {isReset ? <ResetBoard /> : <LoginBoard resetPassword={resetPassword} />}
     </div>
   )

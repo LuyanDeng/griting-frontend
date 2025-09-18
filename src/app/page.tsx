@@ -23,13 +23,14 @@ const LandingMain: React.FC = () => {
     <div className="relative flex flex-col items-center w-full h-fit">
       {/* <div className="absolute top-[0px] left-[0px] w-full h-full bg-gradient-to-r from-[#b1b4f8] via-30% via-[#FAE6FF] vto-100% to-[#75D2FB] animate-gradient-fast z-[-1]" /> */}
       <div className="relative w-full max-w-[1920px]">
-        <div className="pt-[119px] pb-[109px] flex flex-col items-center gap-y-[56px] w-full max-w-[1920px] z-10">
+        <div className="pt-[227.5px] pb-[109px] flex flex-col items-center gap-y-[26px] w-full max-w-[1920px] z-10">
           {/* <BannerWindow /> */}
           <div
             className={`
-              w-11/12 md:w-4/5 lg:w-3/5 xl:w-[46.23%] 
-              font-black 
-              text-[28px] sm:text-[36px]
+              w-11/12 md:w-4/5 lg:w-3/5 xl:w-[66.23%] 
+              
+              font-semibold
+              text-[58px] sm:text-[36px]
               text-[#1E1E1E] 
               leading-[1.4] 
               tracking-[0.03em] 
@@ -37,15 +38,36 @@ const LandingMain: React.FC = () => {
             `}
           >
             <span className="text-center">
-              Placeholder Title Part 1
+              Discover soloutions. Get inspired.
             </span>
             <br />
             <span className="text-center">
-              Placeholder Title Part 2
+              Boost your productivity.
             </span>
           </div>
+          <div className="w-max-[250px] text-[18px] font-normal text-[#555555] text-center leading-[24px] tracking-[0] opacity-100">
+          <span className="text-center">Join a global community of learners and leaders, ready 
+          </span>
+          <br />
+          <span className="text-center">to share knowledge, insights,</span> 
+          <br />
+          <span className="text-center">and real-world experience.</span> 
+          </div>
 
-          <div className="w-[245px] h-[82px]" />
+          <div className="items-center">
+          <Image
+      src="/Group.png"
+      alt="Info section"
+      width={1845}
+      height={338}
+      className="
+        absolute 
+        top-[721px] left-[-20px] 
+        opacity-100 
+        rounded-[20px]
+      "
+    />
+    </div>
         </div>
       </div>
     </div>
