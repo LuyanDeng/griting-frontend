@@ -57,8 +57,8 @@ const CusInput = forwardRef<HTMLInputElement, Props>(
               ref={ref}
               step="0.000000000000000001"
               className={cx(
-                // TODO: consider balanceInput_light and balanceInput_dark
                 color === 'dark' ? style.balanceInput : style.balanceInput_light,
+                "text-gray-400 placeholder-gray-400",  
                 inputClassName,
                 error && style.input_error
               )}

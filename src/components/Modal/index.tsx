@@ -88,13 +88,13 @@ const ModalRender: React.FC = () => {
             >
               <div
                 className={cx(
-                  'p-[27px] min-w-[311px] rounded-[12px] border-[1px] border-solid border-[#ffffff] bg-[rgba(36,30,58,0.12)] backdrop-blur-[103px] modal-zoom-in',
+                  'p-[27px] min-w-[311px] rounded-[12px] border-[1px] border-solid border-[#ffffff] bg-[rgba(252,252,252,0.87)] backdrop-blur-[103px] modal-zoom-in',
                   modal?.wrapperClass
                 )}
               >
                 <div
                   className={cx(
-                    'flex justify-between items-center h-[36px] text-[24px] leading-[36px] -tracking-[0.46px] text-[#ffffff29] font-semibold',
+                    'flex justify-between items-center h-[36px] text-[24px] leading-[36px] -tracking-[0.46px] text-[#000000] font-semibold',
                     modal?.headClass
                   )}
                 >

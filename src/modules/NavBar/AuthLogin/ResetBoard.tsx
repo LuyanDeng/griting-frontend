@@ -23,7 +23,7 @@ const ResetBoard: React.FC = () => {
    return (
       <form
          onSubmit={withSubmit(execTranscation)}
-         className="flex flex-col items-center w-full gap-y-[16px] text-[#fff]"
+         className="flex flex-col items-center w-full gap-y-[16px] text-[#555555]"
       >
          <div className="flex flex-col gap-y-[8px] w-full min-w-[300px]">
             <CusInput
@@ -32,6 +32,7 @@ const ResetBoard: React.FC = () => {
                error={!!errors.email}
                className="w-full"
                placeholder="Please enter your Email"
+               color="light"
                {...register('email', {
                   required: 'Email is required',
                   pattern: {
@@ -47,7 +48,7 @@ const ResetBoard: React.FC = () => {
                </span>
             )}
          </div>
-         <Button loading={inTranscation} color="white" type="submit" className="w-full">
+         <Button loading={inTranscation} color="black" type="submit" className="w-full">
             Submit
          </Button>
       </form>)

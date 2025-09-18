@@ -24,7 +24,7 @@ const AuthLogin: React.FC<AuthLoginProps> = ({ color, children }) => {
   }, [])
 
   if (!isAuthenticated) return (
-    <Button onClick={handleLogin} color={color === 'black' ? 'white' : 'black'}>
+    <Button onClick={handleLogin}  color="black">
       Log in
     </Button>
   )

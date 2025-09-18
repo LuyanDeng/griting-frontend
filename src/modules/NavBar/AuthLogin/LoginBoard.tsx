@@ -15,7 +15,7 @@ const LoginBoardWrapper: React.FC = () => {
   }, [])
 
   return (
-    <div className='flex flex-col items-center w-full gap-y-[16px] text-[#555555]'>
+    <div className='flex flex-col items-center w-full gap-y-[16px] text-[#555555] font-[14px]' >
       {isReset ? <ResetBoard /> : <LoginBoard resetPassword={resetPassword} />}
     </div>
   )
@@ -71,14 +71,17 @@ const LoginBoard: React.FC<LoginBoardProps> = ({ resetPassword }) => {
     <form
       onSubmit={withSubmit(execTranscation)}
       onKeyDown={handleKeyDown}
-      className="flex flex-col items-center w-full gap-y-[16px] text-[#fff]"
+      className="flex flex-col items-center w-full gap-y-[16px] text-[12px] text-[#555555]"
     >
+
       <div className="flex flex-col gap-y-[8px] w-full min-w-[300px]">
         <CusInput
           title='Email'
           error={!!errors.email}
           className="w-full"
+          
           placeholder="Please enter your Email"
+           color="light"  
           {...register('email', {
             required: 'Email is required',
             pattern: {
@@ -100,6 +103,7 @@ const LoginBoard: React.FC<LoginBoardProps> = ({ resetPassword }) => {
           error={!!errors.password}
           className="w-full"
           placeholder="Please enter your Password"
+          color="light"
           {...register('password', {
             required: true
           })}
@@ -133,7 +137,7 @@ const LoginBoard: React.FC<LoginBoardProps> = ({ resetPassword }) => {
       <div className='flex w-full'>
         <span className='cursor-pointer underline' onClick={resetPassword}>Reset Password</span>
       </div>
-      <Button loading={inTranscation} color="white" type="submit" className="w-full">
+      <Button loading={inTranscation} color="black" type="submit" className="w-full">
         Submit
       </Button>
     </form>
