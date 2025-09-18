@@ -1,6 +1,6 @@
 import Navbar from "@/modules/NavBar";
 import Image from "next/image";
-import LandingBg from "./LandingBg";
+import MentorSection from "@/modules/mentors";
 
 const Home: React.FC = () => {
   return (
@@ -10,8 +10,10 @@ const Home: React.FC = () => {
         id="info"
         className="pl-[2.33%] sm:pl-[0px] w-[95%] sm:w-11/12 sm:h-fit xl:w-[79%] max-w-[1920px]"
       >
+        
       
       </div>
+      <MentorSection/>
     </main>
   )
 }
@@ -61,7 +63,7 @@ const LandingMain: React.FC = () => {
       width={1845}
       height={338}
       className="
-        absolute 
+        
         top-[721px] left-[-20px] 
         opacity-100 
         rounded-[20px]
